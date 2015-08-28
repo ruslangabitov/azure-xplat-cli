@@ -17960,7 +17960,7 @@
                           "bool": true,
                           "short": "-y",
                           "long": "--type",
-                          "description": "the endpoint type, valid values are:\n       [externalEndpoint] externalEndpoint represents endpoint\n       for a service with FQDN external to Azure\n       e.g. foobar.contoso.com"
+                          "description": "the endpoint type, valid values are:\n       [externalEndpoint,azureEndpoint] externalEndpoint represents endpoint\n       for a service with FQDN external to Azure, e.g. foobar.contoso.com"
                         },
                         {
                           "flags": "-e, --target <target>",
