@@ -22952,7 +22952,7 @@
                   "name": "add",
                   "description": "Add a backend address pool to an Application Gateway",
                   "fullName": "network application-gateway address-pool add",
-                  "usage": "[options] <gateway-name> <name>",
+                  "usage": "[options] <resource-group> <gateway-name> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -23031,7 +23031,7 @@
                   "name": "remove",
                   "description": "Remove a backend address pool from an Application Gateway",
                   "fullName": "network application-gateway address-pool remove",
-                  "usage": "[options] <gateway-name> <name>",
+                  "usage": "[options] <resource-group> <gateway-name> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -23280,6 +23280,183 @@
                       "short": "-q",
                       "long": "--quiet",
                       "description": "quiet mode, do not ask for unregister confirmation"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            },
+            "ssl-cert": {
+              "name": "ssl-cert",
+              "description": "Commands to manage Application Gateway SSL certificates",
+              "fullName": "network application-gateway ssl-cert",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Add Application Gateway SSL certificate",
+                  "fullName": "network application-gateway ssl-cert add",
+                  "usage": "[options] <resource-group> <name> <cert-name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the Application Gateway"
+                    },
+                    {
+                      "flags": "-c, --cert-name <cert-name>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-c",
+                      "long": "--cert-name",
+                      "description": "the name of the certificate"
+                    },
+                    {
+                      "flags": "-t, --cert-file <cert-file>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-t",
+                      "long": "--cert-file",
+                      "description": "the path to the certificate"
+                    },
+                    {
+                      "flags": "-p, --password <password>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-p",
+                      "long": "--password",
+                      "description": "the certificate password"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "remove",
+                  "description": "Remove Application Gateway SSL certificate",
+                  "fullName": "network application-gateway ssl-cert remove",
+                  "usage": "[options] <resource-group> <name> <cert-name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the Application Gateway"
+                    },
+                    {
+                      "flags": "-c, --cert-name <cert-name>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-c",
+                      "long": "--cert-name",
+                      "description": "the name of the certificate"
+                    },
+                    {
+                      "flags": "-q, --quiet",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-q",
+                      "long": "--quiet",
+                      "description": "quiet mode, do not ask for delete confirmation"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
