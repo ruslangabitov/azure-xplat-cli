@@ -22651,6 +22651,305 @@
                 }
               ],
               "categories": {}
+            },
+            "connection": {
+              "name": "connection",
+              "description": "Commands to manage Gateway connection",
+              "fullName": "network gateway connection",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "create",
+                  "description": "Create a gateway connection",
+                  "fullName": "network gateway connection create",
+                  "usage": "[options] <resource-group> <name> <location>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the gateway connection"
+                    },
+                    {
+                      "flags": "-l, --location <location>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--location",
+                      "description": "the location"
+                    },
+                    {
+                      "flags": "-a, --vnet-gateway1 <vnet-gateway1>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-a",
+                      "long": "--vnet-gateway1",
+                      "description": "the name"
+                    },
+                    {
+                      "flags": "-b, --vnet-gateway2 <vnet-gateway2>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-b",
+                      "long": "--vnet-gateway2",
+                      "description": "the name"
+                    },
+                    {
+                      "flags": "-c, --lnet-gateway2 <lnet-gateway2>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-c",
+                      "long": "--lnet-gateway2",
+                      "description": "the name"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    },
+                    {
+                      "flags": "-t, --tags <tags>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-t",
+                      "long": "--tags",
+                      "description": "the tags set on this local network gateway.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
+                    }
+                  ]
+                },
+                {
+                  "name": "list",
+                  "description": "Get all gateway connections",
+                  "fullName": "network gateway connection list",
+                  "usage": "[options] <resource-group>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "show",
+                  "description": "Get details about gateway connection",
+                  "fullName": "network gateway connection show",
+                  "usage": "[options] <resource-group> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the gateway connection"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "delete",
+                  "description": "Delete a gateway connection",
+                  "fullName": "network gateway connection delete",
+                  "usage": "[options] <resource-group> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the gateway connection"
+                    },
+                    {
+                      "flags": "-q, --quiet",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-q",
+                      "long": "--quiet",
+                      "description": "quiet mode, do not ask for delete confirmation"
+                    },
+                    {
+                      "flags": "-s, --subscription <id>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription id"
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
             }
           }
         }
@@ -24633,6 +24932,14 @@
                   "description": "If specified, won't prompt before delete."
                 },
                 {
+                  "flags": "--passthru",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--passthru",
+                  "description": "If set, displays the properties of deleted role assignment"
+                },
+                {
                   "flags": "--subscription <subscription>",
                   "required": -16,
                   "optional": 0,
@@ -24998,20 +25305,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--reportedStartTime <reportedStartTime>",
+              "flags": "--reportedStartTime <datetime>",
               "required": -21,
               "optional": 0,
               "bool": true,
               "long": "--reportedStartTime",
-              "description": "The start of the time range to retrieve data for."
+              "description": "The start of the time range to retrieve data for, in UTC format."
             },
             {
-              "flags": "--reportedEndTime <reportedEndTime>",
+              "flags": "--reportedEndTime <datetime>",
               "required": -19,
               "optional": 0,
               "bool": true,
               "long": "--reportedEndTime",
-              "description": "The end of the time range to retrieve data for."
+              "description": "The end of the time range to retrieve data for, in UTC format."
             },
             {
               "flags": "--granularity <daily/hourly>",
