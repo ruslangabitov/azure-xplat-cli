@@ -22665,7 +22665,7 @@
               "name": "create",
               "description": "Create an Application Gateway",
               "fullName": "network application-gateway create",
-              "usage": "[options] <resource-group> <name> <vnet-name> <subnet-names>",
+              "usage": "[options] <resource-group> <name> <location>",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
@@ -22694,6 +22694,15 @@
                   "description": "use json output"
                 },
                 {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the name of the resource group"
+                },
+                {
                   "flags": "-n, --name <name>",
                   "required": -12,
                   "optional": 0,
@@ -22701,6 +22710,15 @@
                   "short": "-n",
                   "long": "--name",
                   "description": "the name of the Application Gateway"
+                },
+                {
+                  "flags": "-l, --location <location>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--location",
+                  "description": "the location"
                 },
                 {
                   "flags": "-e, --vnet-name <vnet-name>",
@@ -22719,15 +22737,6 @@
                   "short": "-m",
                   "long": "--subnet-name",
                   "description": "the name of subnet in the virtual network identified by --vnet-name"
-                },
-                {
-                  "flags": "-l, --location <location>",
-                  "required": -16,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-l",
-                  "long": "--location",
-                  "description": "the location"
                 },
                 {
                   "flags": "-c, --cert-name <cert-name>",
@@ -22766,11 +22775,11 @@
                   "description": "the name of the gateway ip configuration"
                 },
                 {
-                  "flags": "-p, --address-pool-name <address-pool-name>",
+                  "flags": "-w, --address-pool-name <address-pool-name>",
                   "required": -25,
                   "optional": 0,
                   "bool": true,
-                  "short": "-p",
+                  "short": "-w",
                   "long": "--address-pool-name",
                   "description": "the name of the backend address pool"
                 },
@@ -22799,7 +22808,7 @@
                   "bool": true,
                   "short": "-c",
                   "long": "--http-settings-protocol",
-                  "description": "the HTTP settings protocol, valid value is [Http]"
+                  "description": "the HTTP settings protocol, valid value is \"Http\""
                 },
                 {
                   "flags": "-o, --http-settings-port <http-settings-port>",
@@ -22817,7 +22826,7 @@
                   "bool": true,
                   "short": "-f",
                   "long": "--http-settings-cookie-based-affinity",
-                  "description": "Enable or disable HTTP settings cookie based affinity, valid values are\n     [Disabled,Enabled],\n     default value is [Disabled]"
+                  "description": "Enable or disable HTTP settings cookie based affinity, valid values are\n     [Disabled,Enabled],\n     default value is \"Disabled\""
                 },
                 {
                   "flags": "-i, --frontend-port-name <frontend-port-name>",
@@ -22883,11 +22892,11 @@
                   "description": "the sku tier"
                 },
                 {
-                  "flags": "-t, --capacity <capacity>",
+                  "flags": "-z, --capacity <capacity>",
                   "required": -16,
                   "optional": 0,
                   "bool": true,
-                  "short": "-t",
+                  "short": "-z",
                   "long": "--capacity",
                   "description": "application gateway instance count in range [2,10]. Default value is 2."
                 },
@@ -22899,6 +22908,112 @@
                   "short": "-y",
                   "long": "--http-listener-name",
                   "description": "the name of the HTTP listener"
+                },
+                {
+                  "flags": "-d, --description <description>",
+                  "required": -19,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-d",
+                  "long": "--description",
+                  "description": "the description for the Application Gateway"
+                },
+                {
+                  "flags": "-s, --subscription <subscription>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "set",
+              "description": "Set an Application Gateway",
+              "fullName": "network application-gateway set",
+              "usage": "[options] <resource-group> <name> <location>",
+              "filePath": "commands/arm/network/network._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the name of the resource group"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the name of the Application Gateway"
+                },
+                {
+                  "flags": "-l, --location <location>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--location",
+                  "description": "the location"
+                },
+                {
+                  "flags": "-l, --sku-name <sku-name>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--sku-name",
+                  "description": "the name of the sku"
+                },
+                {
+                  "flags": "-t, --sku-tier <sku-tier>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-t",
+                  "long": "--sku-tier",
+                  "description": "the sku tier"
+                },
+                {
+                  "flags": "-z, --capacity <capacity>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-z",
+                  "long": "--capacity",
+                  "description": "application gateway instance count in range [2,10]. Default value is 2."
                 },
                 {
                   "flags": "-d, --description <description>",
@@ -23682,38 +23797,38 @@
                       "description": "the name of the frontend IP address name"
                     },
                     {
-                      "flags": "-b, --vnet-name <vnet-name>",
+                      "flags": "-v, --vnet-name <vnet-name>",
                       "required": -17,
                       "optional": 0,
                       "bool": true,
-                      "short": "-b",
+                      "short": "-v",
                       "long": "--vnet-name",
                       "description": "the name of the virtual network"
                     },
                     {
-                      "flags": "-b, --subnet-name <subnet-name>",
+                      "flags": "-k, --subnet-name <subnet-name>",
                       "required": -19,
                       "optional": 0,
                       "bool": true,
-                      "short": "-b",
+                      "short": "-k",
                       "long": "--subnet-name",
                       "description": "the name of the subnet"
                     },
                     {
-                      "flags": "-b, --subnet-id <subnet-id>",
+                      "flags": "-i, --subnet-id <subnet-id>",
                       "required": -17,
                       "optional": 0,
                       "bool": true,
-                      "short": "-b",
+                      "short": "-i",
                       "long": "--subnet-id",
                       "description": "the id of the subnet"
                     },
                     {
-                      "flags": "-i, --static-ip-address <static-ip-address>",
+                      "flags": "-a, --static-ip-address <static-ip-address>",
                       "required": -25,
                       "optional": 0,
                       "bool": true,
-                      "short": "-i",
+                      "short": "-a",
                       "long": "--static-ip-address",
                       "description": "the static IP address name"
                     },
@@ -24237,7 +24352,7 @@
                       "bool": true,
                       "short": "-t",
                       "long": "--protocol",
-                      "description": "the protocol, supported values are [Http,Https], \n     default is [Http]"
+                      "description": "the protocol, supported values are [Http,Https]"
                     },
                     {
                       "flags": "-c, --ssl-cert <ssl-cert>",
