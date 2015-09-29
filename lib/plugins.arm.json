@@ -23564,7 +23564,7 @@
                   "name": "add",
                   "description": "Add an ip config to an Application Gateway",
                   "fullName": "network application-gateway ip-config add",
-                  "usage": "[options] <resource-group> <gateway-name> <subnet-name> <name>",
+                  "usage": "[options] <resource-group> <gateway-name> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -23611,15 +23611,6 @@
                       "description": "the name of the Application Gateway"
                     },
                     {
-                      "flags": "-n, --subnet-name <subnet-name>",
-                      "required": -19,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-n",
-                      "long": "--subnet-name",
-                      "description": "the name of the subnet"
-                    },
-                    {
                       "flags": "-n, --name <name>",
                       "required": -12,
                       "optional": 0,
@@ -23627,6 +23618,24 @@
                       "short": "-n",
                       "long": "--name",
                       "description": "the name of the application gateway ip config"
+                    },
+                    {
+                      "flags": "-n, --vnet-name <vnet-name>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--vnet-name",
+                      "description": "the name of the virtual network"
+                    },
+                    {
+                      "flags": "-n, --subnet-name <subnet-name>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--subnet-name",
+                      "description": "the name of the subnet"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
