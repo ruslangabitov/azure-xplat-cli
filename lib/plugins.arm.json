@@ -23620,20 +23620,20 @@
                       "description": "the name of the application gateway ip config"
                     },
                     {
-                      "flags": "-n, --vnet-name <vnet-name>",
+                      "flags": "-v, --vnet-name <vnet-name>",
                       "required": -17,
                       "optional": 0,
                       "bool": true,
-                      "short": "-n",
+                      "short": "-v",
                       "long": "--vnet-name",
                       "description": "the name of the virtual network"
                     },
                     {
-                      "flags": "-n, --subnet-name <subnet-name>",
+                      "flags": "-u, --subnet-name <subnet-name>",
                       "required": -19,
                       "optional": 0,
                       "bool": true,
-                      "short": "-n",
+                      "short": "-u",
                       "long": "--subnet-name",
                       "description": "the name of the subnet"
                     },
@@ -23806,11 +23806,11 @@
                       "description": "the name of the virtual network"
                     },
                     {
-                      "flags": "-k, --subnet-name <subnet-name>",
+                      "flags": "-u, --subnet-name <subnet-name>",
                       "required": -19,
                       "optional": 0,
                       "bool": true,
-                      "short": "-k",
+                      "short": "-u",
                       "long": "--subnet-name",
                       "description": "the name of the subnet"
                     },
