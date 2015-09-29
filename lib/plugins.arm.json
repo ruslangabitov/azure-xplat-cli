@@ -22874,11 +22874,11 @@
                   "description": "the request routing rule type, default is \"Basic\""
                 },
                 {
-                  "flags": "-l, --sku-name <sku-name>",
+                  "flags": "-a, --sku-name <sku-name>",
                   "required": -16,
                   "optional": 0,
                   "bool": true,
-                  "short": "-l",
+                  "short": "-a",
                   "long": "--sku-name",
                   "description": "the name of the sku"
                 },
@@ -22978,15 +22978,6 @@
                   "short": "-n",
                   "long": "--name",
                   "description": "the name of the Application Gateway"
-                },
-                {
-                  "flags": "-l, --location <location>",
-                  "required": -16,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-l",
-                  "long": "--location",
-                  "description": "the location"
                 },
                 {
                   "flags": "-l, --sku-name <sku-name>",
